@@ -22,6 +22,8 @@
 ## Структура проекту
 
 src/
-├─ modules/ai-editor/ # компоненти та логіка AI Editor
-├─ modules/creative-picker/ # компоненти для вибору карток
-├─ shared/ # загальні компоненти, UI, конфіги
+├─ modules/
+│  ├─ ai-editor/        # компоненти та логіка AI Editor
+│  └─ creative-picker/  # компоненти для вибору карток
+├─ shared/              # загальні компоненти, UI, конфіги
+└─ ...
