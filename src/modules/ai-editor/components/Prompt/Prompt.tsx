@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import Image1 from 'assets/10f89679-0bd2-40d8-8df7-4dee6e89b3a1.png';
+import Image1 from 'assets/10f89679-0bd2-40d8-8df7-4dee6e89b3a1.jpg';
 import { CheckCircle2, ChevronLeft, Star } from 'lucide-react';
 import { useTrackGenerationStore } from 'modules/ai-editor/hooks/useTrackGenerationStore';
 import {
