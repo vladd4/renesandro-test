@@ -22,6 +22,7 @@ import { DEFAULT_PROMTS } from 'shared/config/promts';
 import Button from 'shared/ui/Button/Button';
 import TextArea from 'shared/ui/Input/Textarea';
 import LoaderSpinner from 'shared/ui/LoaderComponent/LoaderSpinner';
+import { toast } from 'sonner';
 
 import PromptLabel from './PromptLabel/PromptLabel';
 
@@ -100,6 +101,8 @@ export default function Prompt({ currentCard }: PromptProps) {
       const result: SaveResponse = await simulateImageSave();
 
       if (result.success && currentCard) {
+        toast.success('Image saved successfully!');
+
         updateAllCards(currentCard);
         setHasUnsavedChanges(false);
         setIsGeneration(false);
@@ -107,7 +110,7 @@ export default function Prompt({ currentCard }: PromptProps) {
         setSelectedPrompt(null);
       }
     } catch (error: unknown) {
-      console.error('Save simulation error:', error);
+      toast.error('Save simulation error!');
       console.log(
         'Error saving image: ' +
           (error instanceof Error ? error.message : 'Unknown error'),
