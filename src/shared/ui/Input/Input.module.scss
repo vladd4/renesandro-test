@@ -1,0 +1,61 @@
+@use "../../styles/variables" as *;
+
+.root {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 10px;
+  p {
+    color: $color-black;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: start;
+    b {
+      color: red;
+    }
+  }
+  div {
+    width: 100%;
+    position: relative;
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 15px;
+      background-color: $color-white;
+      border: 1px solid $color-grey;
+      padding: 14px 16px;
+      font-size: 16px;
+      font-family: inherit;
+      color: $color-grey;
+      resize: none;
+      font-weight: 500;
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: inherit;
+        color: $color-grey;
+      }
+    }
+    textarea {
+      height: 130px;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}

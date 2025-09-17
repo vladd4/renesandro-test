@@ -1,0 +1,27 @@
+@use "../../../../../shared/styles/variables" as *;
+
+.root {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid $color-grey;
+  font-size: 13px;
+  color: $color-black;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  background-color: $color-white;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.active {
+  background-color: $color-main-pink;
+  color: $color-white;
+  border-color: $color-main-pink;
+}

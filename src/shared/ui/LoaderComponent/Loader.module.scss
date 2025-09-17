@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.root {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100svh;
+  z-index: 1005;
+  background-color: $color-light-grey;
+  display: grid;
+  place-items: center;
+  .svg {
+    color: $color-white;
+    animation: spin 1.2s linear infinite;
+  }
+}
+
+.spin {
+  animation: spin 1.2s linear infinite;
+  justify-self: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

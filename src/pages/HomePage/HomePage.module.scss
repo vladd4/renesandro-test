@@ -1,0 +1,56 @@
+@use "../../shared/styles/variables" as *;
+
+.root {
+  width: 100%;
+  display: grid;
+  place-items: flex-start;
+  row-gap: 15px;
+  padding: 20px;
+  h1 {
+    font-size: 29px;
+    color: $color-grey;
+  }
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    gap: 20px;
+    .cards_block {
+      width: fit-content;
+      display: grid;
+      place-items: flex-start;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .root {
+    .wrapper {
+      .cards_block {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .root {
+    .wrapper {
+      .cards_block {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .root {
+    .wrapper {
+      .cards_block {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

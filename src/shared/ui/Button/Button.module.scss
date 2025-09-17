@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.root {
+  width: 100%;
+  color: $color-main-pink;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  padding: 0px 16px;
+  font-family: inherit;
+  border: 1px solid $color-main-pink;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.active {
+  background-color: $color-main-pink;
+  color: $color-white;
+}
+
+.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}

@@ -1,0 +1,65 @@
+@use "../../../../shared/styles/variables" as *;
+
+.root {
+  display: grid;
+  place-items: flex-start;
+  gap: 15px;
+  width: 50%;
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: $color-grey;
+  }
+  .labels_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    margin-top: 15px;
+  }
+  .textarea {
+    width: 100%;
+    height: 370px;
+    resize: none;
+    border: none;
+    outline: none;
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 55px;
+    button {
+      width: fit-content;
+      padding: 0 55px;
+      height: 3.7em;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .root {
+    .textarea {
+      height: 240px;
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .root {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .root {
+    width: 50%;
+    .textarea {
+      height: 220px;
+    }
+  }
+}

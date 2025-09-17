@@ -1,0 +1,89 @@
+@use '../../../../shared/styles/variables' as *;
+
+.root {
+  border-radius: 15px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 290px;
+  height: 290px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  .select_area {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: fit-content;
+    input {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.small_card {
+  width: 180px;
+  height: 180px;
+}
+.big_card {
+  width: 730px;
+  height: 730px;
+}
+.active {
+  border: 3px solid $color-main-pink;
+  pointer-events: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1550px) {
+  .root {
+    width: 270px;
+    height: 270px;
+  }
+  .small_card {
+    width: 180px;
+    height: 180px;
+  }
+  .big_card {
+    width: 540px;
+    height: 540px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .root {
+    width: 240px;
+    height: 240px;
+  }
+  .small_card {
+    width: 170px;
+    height: 170px;
+  }
+  .big_card {
+    width: 50%;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .root {
+    width: 220px;
+    height: 220px;
+  }
+  .small_card {
+    width: 170px;
+    height: 170px;
+  }
+  .big_card {
+    width: 50%;
+    height: 450px;
+  }
+}

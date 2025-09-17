@@ -1,0 +1,67 @@
+@use '../../../../shared/styles/variables' as *;
+
+.root {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 10px;
+  top: 25px;
+  bottom: 25px;
+  height: calc(100svh - 50px);
+  left: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $color-white;
+  .mobile_btn {
+    display: none;
+  }
+  button {
+    height: 3.5em;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .card {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .content > * + * {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .root {
+    flex-direction: column;
+    width: 100%;
+    .content {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap: 10px;
+      button {
+        display: none;
+      }
+    }
+    .mobile_btn {
+      display: block;
+    }
+  }
+}
